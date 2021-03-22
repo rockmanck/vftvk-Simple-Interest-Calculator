@@ -8,14 +8,22 @@ function compute()
     var targetYear = new Date().getFullYear() + parseInt(years);
 
     var result = document.getElementById("result");
-    result.innerHTML = "If you deposit " + principal + "<br/>" 
-        + "at an interest rate of " + rate + "% <br/>"
-        + "You will receive an amount of " + interest + ",<br/>"
-        + "in the year " + targetYear;
+    result.innerHTML = "If you deposit <span class='highlight'>" + principal + "</span><br/>" 
+        + "at an interest rate of <span class='highlight'>" + rate + "%</span><br/>"
+        + "You will receive an amount of <span class='highlight'>" + interest + "</span>,<br/>"
+        + "in the year <span class='highlight'>" + targetYear + "</span>";
 }
 
 function updateRateValue() {
     var val = document.getElementById("rate").value;
     document.getElementById("rateValue").innerHTML = val;
 }
-        
+
+function validatePrincipal() {
+    var input = document.getElementById("principal")
+    var principal = input.value;
+    if (parseInt(principal) <= 0) {
+        alert('Enter a positive number');
+        input.focus();
+    }
+}
