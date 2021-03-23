@@ -15,7 +15,6 @@ h1 {
     width: 500px;
     padding: 20px;
     border-radius: 25px;
-    text-align: center;
 }
 
 .highlight {
@@ -32,4 +31,22 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.table-form {
+    margin-left: 70px;
+    width: 350px;
+    text-align: left;
+}
+
+.column-1 {
+    width: 130px;
+}
+
+.column-2 {
+    width: 230px;
+}
+
+.row {
+    height: 25px;
 }
