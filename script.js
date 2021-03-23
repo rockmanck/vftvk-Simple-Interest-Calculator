@@ -28,7 +28,7 @@ function compute()
 // sync text value of the rate with the slider
 function updateRateValue() {
     var val = document.getElementById("rate").value;
-    document.getElementById("rateValue").innerHTML = val;
+    document.getElementById("rateValue").innerHTML = val + "%";
 }
 
 // rejects negative principal(amount) values
