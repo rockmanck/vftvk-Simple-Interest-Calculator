@@ -1,5 +1,13 @@
 function compute()
 {
+    var result = document.getElementById("result");
+
+    if (isPrincipalInvalid()) {
+        // erase previous output
+        result.innerHTML = "";
+        return;
+    }
+
     // valuate inputs
     var principal = document.getElementById("principal").value;
     var rate = document.getElementById("rate").value;
@@ -10,7 +18,7 @@ function compute()
     var targetYear = new Date().getFullYear() + parseInt(years);
 
     // output interest and format key inputs
-    var result = document.getElementById("result");
+    
     result.innerHTML = "If you deposit <span class='highlight'>" + principal + "</span><br/>" 
         + "at an interest rate of <span class='highlight'>" + rate + "%</span><br/>"
         + "You will receive an amount of <span class='highlight'>" + interest + "</span>,<br/>"
@@ -24,12 +32,14 @@ function updateRateValue() {
 }
 
 // rejects negative principal(amount) values
-function validatePrincipal() {
+function isPrincipalInvalid() {
     var input = document.getElementById("principal")
     var principal = input.value;
 
     if (principal == '' || parseInt(principal) <= 0) {
         alert('Enter a positive amount');
         input.focus();
+        return true;
     }
+    return false;
 }
