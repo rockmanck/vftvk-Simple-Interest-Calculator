@@ -1,20 +1,21 @@
 body {
     background-color: black;
-    font: "Arial";
+    font-family: "Arial";
     color: white;
 }
 
 h1 {
+    font-family: "Verdana";
     color:grey;
 }
 
 .maindiv {
     background-color: white;
     color: black;
-    width: 300px;
+    width: 500px;
     padding: 20px;
     border-radius: 25px;
-    align: center;
+    text-align: center;
 }
 
 .highlight {
